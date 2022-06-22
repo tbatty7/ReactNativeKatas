@@ -14,7 +14,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import * as React from 'react';
-import {Section} from './App';
+import {Section} from './Section';
 
 export function HelpScreen(props: {
   style: {backgroundColor: any};
