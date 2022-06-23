@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {Provider} from 'react-redux';
 import {store} from './store';
-import {HelpScreen} from './HelpScreen';
+import {AppStack} from './AppStack';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <HelpScreen />
+      <AppStack />
     </Provider>
   );
 };

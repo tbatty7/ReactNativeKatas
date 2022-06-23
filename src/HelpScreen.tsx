@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -14,7 +15,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import * as React from 'react';
 import {Section} from './Section';
 
 export function HelpScreen() {
