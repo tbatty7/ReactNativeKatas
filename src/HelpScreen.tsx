@@ -4,6 +4,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  useColorScheme,
   View,
 } from 'react-native';
 import {
@@ -16,20 +17,22 @@ import {
 import * as React from 'react';
 import {Section} from './Section';
 
-export function HelpScreen(props: {
-  style: {backgroundColor: any};
-  darkMode: boolean;
-}) {
+export function HelpScreen() {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
   return (
-    <SafeAreaView style={props.style}>
-      <StatusBar barStyle={props.darkMode ? 'light-content' : 'dark-content'} />
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={props.style}>
+        style={backgroundStyle}>
         <Header />
         <View
           style={{
-            backgroundColor: props.darkMode ? Colors.black : Colors.white,
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
