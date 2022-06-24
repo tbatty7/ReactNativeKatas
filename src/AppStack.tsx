@@ -12,8 +12,8 @@ export const AppStack = () => {
       <Stack.Navigator
         screenOptions={{headerShown: true}}
         initialRouteName="Landing">
-        <Stack.Screen name="Help" component={HelpScreen} />
         <Stack.Screen name="Landing" component={LandingScreen} />
+        <Stack.Screen name="Help" component={HelpScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
