@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {View} from 'react-native';
-import {Button} from '@rneui/themed';
+import {Button, Text} from '@rneui/themed';
 
 export function LandingScreen(props: {navigation: any}) {
   function handleHelpButton() {
@@ -14,6 +14,7 @@ export function LandingScreen(props: {navigation: any}) {
   return (
     <View>
       <Button title="React Help" onPress={handleHelpButton} />
+      <Text> </Text>
       <Button title="Redux Slice Kata" onPress={handleSliceKataButton} />
     </View>
   );
