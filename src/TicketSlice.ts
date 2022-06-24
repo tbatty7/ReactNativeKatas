@@ -6,7 +6,7 @@ export const ticketSlice = createSlice({
   initialState: initialState,
   reducers: {
     createTicket: (state, action) => {
-      state.totalPrice = action.payload.totalPrice;
+      state.totalPrice = action.payload;
     },
   },
 });
