@@ -1,6 +1,6 @@
 ## Kata for Creating Redux Slice
 
-- Create test for TicketSlice
+- Create test for TicketSlice to createTicket
   - Implement TicketSlice file with tests
 - Create index.ts to create appReducer to combineReducers
 - Create store.ts
