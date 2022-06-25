@@ -2,17 +2,11 @@ import * as React from 'react';
 import {View} from 'react-native';
 import {Button, Input, Text} from '@rneui/themed';
 import {useState} from 'react';
-import {useAppDispatch, useAppSelector} from './hooks';
-import {createTicket} from './TicketSlice';
 
 export function SliceKataScreen() {
   const [price, setPrice] = useState(null);
-  const dispatch = useAppDispatch();
-  const newPrice = useAppSelector(state => state.ticket.totalPrice);
 
-  function handlePress() {
-    return dispatch(createTicket(price));
-  }
+  function handlePress() {}
 
   return (
     <View>
@@ -25,7 +19,7 @@ export function SliceKataScreen() {
       />
       <Button title="Submit" onPress={handlePress} />
       <Text>{'\n'}</Text>
-      <Text>{newPrice}</Text>
+      <Text>{}</Text>
     </View>
   );
 }

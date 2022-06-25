@@ -7,4 +7,4 @@
 - Create hooks.ts that defines useAppSelector and useAppDispatch
 - Create index.ts to create appReducer to combineReducers
 - Create test for SliceKataScreen
-- Implement dispatching action in SliceKataScreen
+  - Implement dispatching action in SliceKataScreen
