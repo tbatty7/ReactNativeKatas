@@ -1,10 +1,6 @@
 import * as React from 'react';
-import {Animated, StyleSheet, Text} from 'react-native';
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView,
-} from 'react-native-gesture-handler';
+import {Animated, StyleSheet, Text, View} from 'react-native';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import {
   useSharedValue,
   withSpring,
@@ -13,10 +9,10 @@ import {
 
 export function AnimationScreen() {
   return (
-    <GestureHandlerRootView style={styles.container}>
+    <View style={styles.container}>
       <Text>AnimationScreen</Text>
       <Ball />
-    </GestureHandlerRootView>
+    </View>
   );
 }
 
