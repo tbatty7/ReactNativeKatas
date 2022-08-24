@@ -10,5 +10,10 @@ export function AnimationScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {backgroundColor: '#FCFCFC', alignItems: 'center', margin: 50},
+  container: {
+    flex: 1,
+    backgroundColor: '#FCBCAA',
+    alignItems: 'center',
+    margin: 50,
+  },
 });
