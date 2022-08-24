@@ -11,6 +11,10 @@ export function LandingScreen(props: {navigation: any}) {
     return props.navigation.navigate('SliceKata');
   }
 
+  function handleAnimationsPress() {
+    return props.navigation.navigate('Animations');
+  }
+
   return (
     <View style={{alignItems: 'center', margin: 50}}>
       <Button
@@ -29,7 +33,7 @@ export function LandingScreen(props: {navigation: any}) {
         titleStyle={styles.title}
         buttonStyle={styles.button}
         title="Animations"
-        onPress={() => {}}
+        onPress={handleAnimationsPress}
       />
     </View>
   );

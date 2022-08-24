@@ -4,6 +4,7 @@ import {HelpScreen} from './HelpScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {LandingScreen} from './LandingScreen';
 import {SliceKataScreen} from './SliceKataScreen';
+import {AnimationScreen} from './AnimationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export const AppStack = () => {
         <Stack.Screen name="Landing" component={LandingScreen} />
         <Stack.Screen name="Help" component={HelpScreen} />
         <Stack.Screen name="SliceKata" component={SliceKataScreen} />
+        <Stack.Screen name="Animations" component={AnimationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -25,6 +25,10 @@ describe('LandingScreen', () => {
     pressButtonWithText(landingScreen, 'Redux Slice Kata');
     expect(navigate).toHaveBeenCalledWith('SliceKata');
   });
+  it('should navigate to animations screen when button pushed', () => {
+    pressButtonWithText(landingScreen, 'Animations');
+    expect(navigate).toHaveBeenCalledWith('Animations');
+  });
 });
 
 export function pressButtonWithText(screen: RenderAPI, stringToFind: string) {
