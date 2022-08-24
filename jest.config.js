@@ -14,7 +14,10 @@ module.exports = {
     '^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
       'jest-transform-stub',
   },
-  setupFiles: ['./jest.setup.js'],
+  setupFiles: [
+    './jest.setup.js',
+    './node_modules/react-native-gesture-handler/jestSetup.js',
+  ],
   setupFilesAfterEnv: ['jest-expect-message'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules',
