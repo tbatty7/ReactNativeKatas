@@ -19,18 +19,23 @@ export function LandingScreen(props: {navigation: any}) {
         title="React Help"
         onPress={handleHelpButton}
       />
-      <Text> </Text>
       <Button
         titleStyle={styles.title}
         buttonStyle={styles.button}
         title="Redux Slice Kata"
         onPress={handleSliceKataButton}
       />
+      <Button
+        titleStyle={styles.title}
+        buttonStyle={styles.button}
+        title="Animations"
+        onPress={() => {}}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  button: {width: 300, height: 70, borderRadius: 10},
+  button: {width: 300, height: 70, borderRadius: 10, margin: 10},
   title: {fontSize: 30},
 });

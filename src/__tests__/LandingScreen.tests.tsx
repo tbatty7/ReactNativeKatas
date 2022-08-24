@@ -14,6 +14,8 @@ describe('LandingScreen', () => {
   });
   it('should render', () => {
     landingScreen.getByText('React Help');
+    landingScreen.getByText('Redux Slice Kata');
+    landingScreen.getByText('Animations');
   });
   it('should navigate to help screen when button pushed', () => {
     pressButtonWithText(landingScreen, 'React Help');
