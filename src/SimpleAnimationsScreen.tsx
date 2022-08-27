@@ -13,24 +13,22 @@ export function SimpleAnimationsScreen() {
     }).start();
   }, [translation]);
 
+  const animationStyles = {
+    transform: [
+      {
+        translateX: translation,
+      },
+    ],
+    opacity: translation.interpolate({
+      inputRange: [0, 1000],
+      outputRange: [0, 1],
+    }),
+  };
   return (
     <View style={styles.screen}>
       <Animated.View
         accessibilityLabel={'ball'}
-        style={[
-          styles.ball,
-          {
-            transform: [
-              {
-                translateX: translation,
-              },
-            ],
-            opacity: translation.interpolate({
-              inputRange: [0, 1000],
-              outputRange: [0, 1],
-            }),
-          },
-        ]}
+        style={[styles.ball, animationStyles]}
       />
     </View>
   );
