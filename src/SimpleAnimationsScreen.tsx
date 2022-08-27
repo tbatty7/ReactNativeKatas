@@ -20,8 +20,8 @@ export function SimpleAnimationsScreen() {
       },
     ],
     opacity: translation.interpolate({
-      inputRange: [0, 1000],
-      outputRange: [0, 1],
+      inputRange: [0, 200, 800, 1000],
+      outputRange: [1, 0, 0, 1],
     }),
   };
   return (
