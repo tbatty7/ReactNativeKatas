@@ -20,8 +20,9 @@ export function SimpleAnimationsScreen() {
       },
       {
         translateY: translation.interpolate({
-          inputRange: [0, 500, 1000],
-          outputRange: [0, 0, 500],
+          inputRange: [500, 1000],
+          outputRange: [0, 500],
+          extrapolateLeft: 'clamp',
         }),
       },
     ],
