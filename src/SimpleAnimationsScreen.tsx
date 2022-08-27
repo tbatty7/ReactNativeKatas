@@ -8,6 +8,7 @@ export function SimpleAnimationsScreen() {
   useEffect(() => {
     Animated.timing(translation, {
       toValue: 1000,
+      duration: 3000,
       useNativeDriver: true,
     }).start();
   }, [translation]);
