@@ -1,23 +1,24 @@
 import * as React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {useEffect, useState} from 'react';
+import {Animated, StyleSheet, View} from 'react-native';
+import {useEffect, useRef} from 'react';
 
 export function SimpleAnimationsScreen() {
-  const [translation, setTranslation] = useState(0);
+  const translation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     for (let i = 0; i < 1000; i++) {
       setTimeout(() => {
-        setTranslation(i);
+        translation.setValue(i);
       }, 25 * i);
     }
   }, []);
 
   return (
     <View style={styles.screen}>
-      <View
+      <Animated.View
         accessibilityLabel={'ball'}
-        style={[styles.ball, {transform: [{translateX: translation}]}]}></View>
+        style={[styles.ball, {transform: [{translateX: translation}]}]}
+      />
     </View>
   );
 }
