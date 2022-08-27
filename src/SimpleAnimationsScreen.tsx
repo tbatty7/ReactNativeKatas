@@ -6,12 +6,11 @@ export function SimpleAnimationsScreen() {
   const translation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    for (let i = 0; i < 1000; i++) {
-      setTimeout(() => {
-        translation.setValue(i);
-      }, 25 * i);
-    }
-  }, []);
+    Animated.timing(translation, {
+      toValue: 1000,
+      useNativeDriver: true,
+    }).start();
+  }, [translation]);
 
   return (
     <View style={styles.screen}>
