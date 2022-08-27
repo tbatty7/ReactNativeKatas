@@ -18,6 +18,12 @@ export function SimpleAnimationsScreen() {
       {
         translateX: translation,
       },
+      {
+        translateY: translation.interpolate({
+          inputRange: [0, 500, 1000],
+          outputRange: [0, 0, 500],
+        }),
+      },
     ],
     opacity: translation.interpolate({
       inputRange: [0, 200, 800, 1000],
