@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Button, Text} from '@rneui/themed';
+import {Button} from '@rneui/themed';
 
 export function LandingScreen(props: {navigation: any}) {
   function handleHelpButton() {
@@ -13,6 +13,10 @@ export function LandingScreen(props: {navigation: any}) {
 
   function handleAnimationsPress() {
     return props.navigation.navigate('Animations');
+  }
+
+  function handleSimpleAnimationsPress() {
+    return props.navigation.navigate('SimpleAnimations');
   }
 
   return (
@@ -34,6 +38,12 @@ export function LandingScreen(props: {navigation: any}) {
         buttonStyle={styles.button}
         title="Animations"
         onPress={handleAnimationsPress}
+      />
+      <Button
+        titleStyle={styles.title}
+        buttonStyle={styles.button}
+        title="Simple Animations"
+        onPress={handleSimpleAnimationsPress}
       />
     </View>
   );

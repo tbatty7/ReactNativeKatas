@@ -6,6 +6,7 @@ import {LandingScreen} from './LandingScreen';
 import {SliceKataScreen} from './SliceKataScreen';
 import {AnimationScreen} from './AnimationScreen';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SimpleAnimationsScreen} from './SimpleAnimationsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,10 @@ export const AppStack = () => {
           <Stack.Screen name="Help" component={HelpScreen} />
           <Stack.Screen name="SliceKata" component={SliceKataScreen} />
           <Stack.Screen name="Animations" component={AnimationScreen} />
+          <Stack.Screen
+            name="SimpleAnimations"
+            component={SimpleAnimationsScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>

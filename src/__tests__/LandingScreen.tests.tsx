@@ -29,6 +29,10 @@ describe('LandingScreen', () => {
     pressButtonWithText(landingScreen, 'Animations');
     expect(navigate).toHaveBeenCalledWith('Animations');
   });
+  it('should navigate to simple animations screen when button pushed', () => {
+    pressButtonWithText(landingScreen, 'Simple Animations');
+    expect(navigate).toHaveBeenCalledWith('SimpleAnimations');
+  });
 });
 
 export function pressButtonWithText(screen: RenderAPI, stringToFind: string) {
