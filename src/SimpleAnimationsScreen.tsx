@@ -17,7 +17,20 @@ export function SimpleAnimationsScreen() {
     <View style={styles.screen}>
       <Animated.View
         accessibilityLabel={'ball'}
-        style={[styles.ball, {transform: [{translateX: translation}]}]}
+        style={[
+          styles.ball,
+          {
+            transform: [
+              {
+                translateX: translation,
+              },
+            ],
+            opacity: translation.interpolate({
+              inputRange: [0, 1000],
+              outputRange: [0, 1],
+            }),
+          },
+        ]}
       />
     </View>
   );
