@@ -57,7 +57,7 @@ function objectMove(object, from, to) {
   return newObject;
 }
 
-function listToObject(list) {
+function listToObject(list: SongInfo[]) {
   const values = Object.values(list);
   const object = {};
 
@@ -81,42 +81,19 @@ const ALBUM_COVERS = {
 
 const DAFT_PUNK = 'Daft Punk';
 
-const SONGS = shuffle([
-  {
-    id: 'one-more-time',
-    title: 'One More Time',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.DISCOVERY,
-  },
-  {
-    id: 'digital-love',
-    title: 'Digital Love',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.DISCOVERY,
-  },
-  {
-    id: 'nightvision',
-    title: 'Nightvision',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.DISCOVERY,
-  },
-  {
-    id: 'something-about-us',
-    title: 'Something About Us',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.DISCOVERY,
-  },
+interface SongInfo {
+  id: string;
+  title: string;
+  artist: string;
+  cover: string;
+}
+
+const SONGS: SongInfo[] = shuffle([
   {
     id: 'veridis-quo',
     title: 'Veridis Quo',
     artist: DAFT_PUNK,
     cover: ALBUM_COVERS.DISCOVERY,
-  },
-  {
-    id: 'make-love',
-    title: 'Make Love',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.HUMAN_AFTER_ALL,
   },
   {
     id: 'television-rules-the-nation',
@@ -141,18 +118,6 @@ const SONGS = shuffle([
     title: 'Around the World',
     artist: DAFT_PUNK,
     cover: ALBUM_COVERS.HOMEWORK,
-  },
-  {
-    id: 'within',
-    title: 'Within',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.RANDOM_ACCESS_MEMORIES,
-  },
-  {
-    id: 'touch',
-    title: 'Touch (feat. Paul Williams)',
-    artist: DAFT_PUNK,
-    cover: ALBUM_COVERS.RANDOM_ACCESS_MEMORIES,
   },
   {
     id: 'beyond',
@@ -320,7 +285,7 @@ export function AnimationScreen() {
       <StatusBar barStyle="dark-content" />
       <SafeAreaProvider>
         <SafeAreaView style={{flex: 1}}>
-          <Animated.ScrollView
+          <Animated.View
             ref={scrollViewRef}
             onScroll={handleScroll}
             scrollEventThrottle={16}
@@ -344,7 +309,7 @@ export function AnimationScreen() {
                 songsCount={SONGS.length}
               />
             ))}
-          </Animated.ScrollView>
+          </Animated.View>
         </SafeAreaView>
       </SafeAreaProvider>
     </>
